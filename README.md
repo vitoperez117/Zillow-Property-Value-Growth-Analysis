@@ -20,7 +20,7 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 
 ### Findings
 Quantiles
-<img width="350" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Assets/Quantiles.png">
+<img width="150" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Assets/Quantiles.png">
 
 
 ### Limitations
