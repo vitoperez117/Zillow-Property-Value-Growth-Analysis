@@ -7,7 +7,6 @@ Zillow ZHVI time-series [dataset](https://drive.google.com/file/d/1SeR8qDqmhj0YH
 ### Data Cleaning
 1. Null values
 There are 1,356,132 null values in the original dataset; that's **19.5%** (nearly 1/5) of total data. Some neighborhoods only have data for the past few months. For example, Silver Lake neighborhood in Blairstown Nownship, New Jersey only has data from December 2023 to May 2024. Filling them in with adjacent data (**pandas.bfill()**) significantly increased growth rates; doing this method caused some neighborhoods to show inaccurate growth rates like 40,000% in some.
-
 Null values were ultimately dropped. 
 
 2. Dropping columns
@@ -20,6 +19,8 @@ Rate of change formula used:
 First, we look at the total set of neighborhoods. Then, we take the 50 neighborhoods with the fastest growth. Scatterplots are used here to observe the distribution across percentiles.
 
 ### Findings
+Quantiles
+<img width="350" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Assets/Quantiles.png">
 
 
 ### Limitations
