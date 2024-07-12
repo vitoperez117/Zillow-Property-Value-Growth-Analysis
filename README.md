@@ -20,14 +20,16 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 
 ### Findings
 
-#All Neighborhoods
+# All Neighborhoods
+
 <img width="800" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/All%20Neighborhoods%205%20year%20ROC.png">
 
 - 5,482 neighborhoods are within the 75th percentile: their growth rates are above 64.71%.
 - 10,964 neighborhoods are within the 50th percentile: their growth rates are between 64.71% and 39.5%.
 - 5,481 neighborhoods are within the 25th percentile: their growth rates are less than 39.5%
 
-#Top 50 Neighborhoods
+# Top 50 Neighborhoods
+
 <img width="500" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/Top%2050%20Neighborhoods%20scatterplot.png">
 
 
