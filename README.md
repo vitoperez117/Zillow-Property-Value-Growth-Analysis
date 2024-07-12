@@ -19,9 +19,14 @@ Rate of change formula used:
 First, we look at the total set of neighborhoods. Then, we take the 50 neighborhoods with the fastest growth. Scatterplots are used here to observe the distribution across percentiles.
 
 ### Findings
-Quantiles
-<img width="150" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Assets/Quantiles.png">
+1. Quantiles
 
+        <img width="300" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Assets/Quantiles.png">
+        
+        5,482 neighborhoods are within the 75th percentile: their growth rates are above 64.71%.
+        10,964 neighborhoods are within the 50th percentile: their growth rates are between 64.71% and 39.5%.
+        5,481 neighborhoods are within the 25th percentile: their growth rates are less than 39.5%
+2. 
 
 ### Limitations
 1. Null values accounted for nearly 1/5 of the data set.
