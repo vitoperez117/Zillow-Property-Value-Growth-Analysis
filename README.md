@@ -24,6 +24,7 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 
 <img width="800" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/All%20Neighborhoods%205%20year%20ROC.png">
 
+- The mean growth rate is 52.16%
 - 5,482 neighborhoods are within the 75th percentile: their growth rates are above 64.71%.
 - 10,964 neighborhoods are within the 50th percentile: their growth rates are between 64.71% and 39.5%.
 - 5,481 neighborhoods are within the 25th percentile: their growth rates are less than 39.5%
@@ -32,6 +33,9 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 
 <img width="500" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/Top%2050%20Neighborhoods%20scatterplot.png">
 
+- The mean growth rate is 152.27%.
+- The top 50 neighborhoods saw home values grow more than double in 5 years.
+- Median was used as a guideline to avoid skew from the high-performing outliers.
 
 ### Limitations
 1. Null values accounted for nearly 1/5 of the data set.
