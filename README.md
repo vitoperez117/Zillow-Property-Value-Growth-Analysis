@@ -16,17 +16,23 @@ Dropped the following columns with unrelated data: "RegionID", "SizeRank", "Stat
 Rate of change formula used:
 ((Current Value - Previous Value)/Previous Value) * 100
 
-First, we look at the total set of neighborhoods. Then, we take the 50 neighborhoods with the fastest growth. Scatterplots are used here to observe the distribution across percentiles.
+First, we look at the total set of neighborhoods. Then, we take the 50 neighborhoods with the fastest growth and observe their distribution around the median.. Scatterplots are used here to observe the distribution across percentiles.
 
 ### Findings
 1. Quantiles
 
-        <img width="300" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Assets/Quantiles.png">
-        
-        5,482 neighborhoods are within the 75th percentile: their growth rates are above 64.71%.
-        10,964 neighborhoods are within the 50th percentile: their growth rates are between 64.71% and 39.5%.
-        5,481 neighborhoods are within the 25th percentile: their growth rates are less than 39.5%
-2. 
+<img width="300" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Assets/Quantiles.png">
+
+5,482 neighborhoods are within the 75th percentile: their growth rates are above 64.71%.
+10,964 neighborhoods are within the 50th percentile: their growth rates are between 64.71% and 39.5%.
+5,481 neighborhoods are within the 25th percentile: their growth rates are less than 39.5%
+
+2. All Neighborhoods
+<img width="300" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/All%20Neighborhoods%205%20year%20ROC.png">
+
+3. Top 50 Neighborhoods
+<img width="300" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/Top%2050%20Neighborhoods%20scatterplot.png">
+
 
 ### Limitations
 1. Null values accounted for nearly 1/5 of the data set.
