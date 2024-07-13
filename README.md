@@ -2,7 +2,7 @@
 The objective is to find neighborhoods with the fastest rising home values in order to assist potential real estate investors start their search. Realistically, real estate investment involves more than home value growth. However, this research provides a useful starting point.
 
 ### Understanding the Data
-Zillow ZHVI time-series [dataset](https://drive.google.com/file/d/1SeR8qDqmhj0YHPOMiBU1zEbyaIjmAnga/view?usp=sharing) from January 1989 to May 2023 containing home values of single-family residences in 23,917 US neighborhoods across 296 months. Values smoothed, seasonally adjusted, and calculated by taking a trimmed mean of Zillow's own estimates while accounting for [repeat sales index](https://www.investopedia.com/terms/r/repeatsales-method.asp) - [more here](https://www.zillow.com/research/methodology-neural-zhvi-32128/). 
+Zillow ZHVI time-series [dataset](https://drive.google.com/file/d/1SeR8qDqmhj0YHPOMiBU1zEbyaIjmAnga/view?usp=sharing) from January 1989 to May 2024 containing home values of single-family residences in 23,917 US neighborhoods across 296 months. Values smoothed, seasonally adjusted, and calculated by taking a trimmed mean of Zillow's own estimates while accounting for [repeat sales index](https://www.investopedia.com/terms/r/repeatsales-method.asp) - [more here](https://www.zillow.com/research/methodology-neural-zhvi-32128/). 
 
 ### Data Cleaning
 1. Null values
