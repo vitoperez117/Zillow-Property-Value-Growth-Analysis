@@ -22,7 +22,7 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 
 #### All Neighborhoods
 
-<img width="800" src="">
+<img width="800" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/All%20Neighborhoods%205%20year%20ROC.png">
 
 *Note: The names of the 23,917 neighborhoods do not fit underneath the x-axis. For viewability, they have been removed.
 
@@ -37,7 +37,7 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 
 #### Top 50 Neighborhoods
 
-<img width="500" src="">
+<img width="500" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/Top%2050%20Neighborhoods%20scatterplot.png">
 
 - The mean growth rate is 152.27%.
 - The top 50 neighborhoods saw home values grow more than double in 5 years.
