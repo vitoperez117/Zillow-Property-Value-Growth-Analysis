@@ -46,7 +46,6 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 ### Limitations
 1. Null values accounted for nearly 1/5 of the data set.
 2. Findings rely on Zillow's value estimates.
-3. 
 
 ### Next Steps
 1. Identify neighborhoods within each percentile.
