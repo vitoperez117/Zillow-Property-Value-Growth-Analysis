@@ -25,11 +25,15 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 <img width="800" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/All%20Neighborhoods%205%20year%20ROC.png">
 
 *Note: The names of the 23,917 neighborhoods do not fit underneath the x-axis. For viewability, they have been removed.
+
 - The mean growth rate is 52.16%
+- The maximum growth rate is 211.88%
+- The minimum growth rate is -44.22%
+
 - 75th percentile: 5,482 neighborhoods with growth rates above 64.71%.
 - 50th percentile: 10,964 neighborhoods with growth rates between 64.71% and 39.5%.
 - 25th percentile: 5,481 neighborhoods with growth rates less than 39.5%
-- Red data points: 
+- Red data points: growth rate below 0%.
 
 #### Top 50 Neighborhoods
 
@@ -44,8 +48,9 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 2. Findings rely on Zillow's value estimates.
 3. 
 
-### Possible Improvements
-1. Find datasets with significantly less null values.
-2. Consider different methods of estimating home values from other real estate companies or public agencies.
-3. Zoom in on highest performing neighborhoods as well as neighborhoods with a negative growth rate.
-4. Add tooltips so that each point shows more information when the cursor is hovering over it.
+### Next Steps
+1. Identify neighborhoods within each percentile.
+2. Find datasets with significantly less null values.
+3. Consider different methods of estimating home values from other real estate companies or public agencies.
+4. Zoom in on highest performing neighborhoods as well as neighborhoods with a negative growth rate.
+5. Add tooltips so that each point shows more information when the cursor is hovering over it.
