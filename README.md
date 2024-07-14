@@ -10,7 +10,7 @@ There are 1,356,132 null values in the original dataset; that's **19.5%** (nearl
 Null values were ultimately dropped. 
 
 2. Dropping columns
-Dropped the following columns with unrelated data: "RegionID", "SizeRank", "StateName" (state initials column was kept), "Metro".
+Dropped the following columns with unrelated data: "RegionID", "SizeRank", "Metro", and "StateName" (state initials column was kept).
 
 ### Method
 Rate of change formula used:
