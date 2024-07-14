@@ -26,9 +26,11 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 
 *Note: The names of the 23,917 neighborhoods do not fit underneath the x-axis. For viewability, they have been removed.
 
-- The mean growth rate is 52.16%
-- The maximum growth rate is 211.88%
-- The minimum growth rate is -44.22%
+Although the spread between the minimum and maximum is wide, the distribution of growth rates is symmetrical because the mean and median are approximately close.
+- Mean: 52.16%
+- Median: 51.93% 
+- Maximum: 211.88%
+- Minimum: -44.22%
 
 - 75th percentile: 5,482 neighborhoods with growth rates above 64.71%.
 - 50th percentile: 10,964 neighborhoods with growth rates between 64.71% and 39.5%.
@@ -39,9 +41,10 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 
 <img width="500" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/Top%2050%20Neighborhoods%20scatterplot.png">
 
-- The mean growth rate is 152.27%.
+The spread between minimum and maximum is closer but the distribution is less symmetrical compared to the chart with all neighborhoods because mean and median are further apart.
+- Mean: 152.27%
+- Median: 148.70%
 - The top 50 neighborhoods saw home values grow more than double in 5 years.
-- Median was used as a guideline to avoid skew from the high-performing outliers.
 
 ### Limitations
 1. Null values accounted for nearly 1/5 of the data set.
