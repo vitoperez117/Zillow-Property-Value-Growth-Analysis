@@ -16,15 +16,12 @@ house = house.drop(["RegionID", "SizeRank", "StateName", "Metro"], axis=1)
 house.isnull().values.sum()
 
 #Create New Columns for Rate of Change
-house1["Rate of Change 10year"]=(house1["2024-05-31"]-house1["2014-05-31"])/house1["2014-05-31"]
-house1["Rate of Change 5year"]=(house1["2024-05-31"]-house1["2019-05-31"])/house1["2019-05-31"]
-house1["Rate of Change 3year"]=(house1["2024-05-31"]-house1["2021-05-31"])/house1["2021-05-31"]
-
-#Get Top 50 Neighborhoods by 5 Year Rate of Change
-top_50 = house1.sort_values(by=['Rate of Change 5year'], ascending=False)
+house["Rate of Change 10year"]=(house["2024-05-31"]-house["2014-05-31"])/house["2014-05-31"]
+house["Rate of Change 5year"]=(house["2024-05-31"]-house["2019-05-31"])/house["2019-05-31"]
+house["Rate of Change 3year"]=(house["2024-05-31"]-house["2021-05-31"])/house["2021-05-31"]
 
 #Plotting all Neighborhoods based on 5 Year Rate of Change
-alldf=top_50[['RegionName', 'City', 'State','Rate of Change 5year']].sort_values(by=('Rate of Change 5year'), ascending=False)
+alldf=house[['RegionName', 'City', 'State','Rate of Change 5year']].sort_values(by=('Rate of Change 5year'), ascending=False)
 alldf['%']=alldf['Rate of Change 5year'].apply(lambda x: x*100)
 
 #Clear Null values
@@ -37,31 +34,39 @@ y_all=alldf['%']
 #show basic stats
 alldf.describe()
 
-stats=np.percentile((alldf['%']), range(0,125,25))
-
+#Percentiles
+stats=np.percentile(y_all,range(0,125,25)) #use nunmpy to calculate percentile cutoffs
 min=stats[0]
 pct25=stats[1]
 mean_all=np.mean(y_all)
 pct75=stats[3]
 max=stats[4]
 
-#Percentiles
-tile75 = []
-tile50 = []
-tile25 = []
+#Percentiles function
+def percentiles(y):
 
-for i in y_all:
-    if i <= max and i > pct75:
-        tile75.append(i)
-    if i<= pct75 and i>pct25:
-        tile50.append(i)
-    if i<= pct25 and i>min:
-        tile25.append(i)
+    #make a list for each percentile
+    tile75 = []
+    tile50 = []
+    tile25 = []
+    tileneg = [] #negative values
 
-tiles=[tile75, tile50, tile25]
-for i in tiles:
-    print(len(i))
+    #categorize values into percentiles
+    for i in y:
+        if i <= max and i > pct75:
+            tile75.append(i)
+        if i<= pct75 and i>pct25:
+            tile50.append(i)
+        if i<= pct25 and i>min:
+            tile25.append(i)
+        if i < 0:
+            tileneg.append(i)
+    
+    tiles=[tile75, tile50, tile25, tileneg]
 
+    #print number of values in each percentile
+    for t in tiles:
+        print(len(t))
 
 #Scatterplot for all neighborhoods
 plt.figure(figsize = (10, 6))  
@@ -77,7 +82,7 @@ plt.scatter( x_all, y_all, marker = 'o', s = 15, c = colorall)
 
 #Plot Percentile Lines
 minl = plt.axhline(y=min)
-#plt.text(len(x_all)-10, min, 'MIN', fontsize = 10)
+plt.text(len(x_all)-10, min, f'Min: {min}', fontsize = 10)
 
 pct25l = plt.axhline(y=pct25)
 plt.text(len(x_all), 0, '25th Percentile', fontsize = 10)
@@ -86,10 +91,10 @@ meanl = plt.axhline(y=mean_all)
 plt.text(len(x_all), mean_all, 'MEAN | 50th Percentile', fontsize = 10)
 
 pct75l = plt.axhline(y=pct75)
-#plt.text(len(x_all), pct75, '75th Percentile', fontsize = 10)
+plt.text(len(x_all), 150, '75th Percentile', fontsize = 10)
 
 maxl = plt.axhline(y=max)
-plt.text(len(x_all), 150, '75th Percentile', fontsize = 10)
+plt.text(len(x_all), max, f'Max: {round(max,2)}', fontsize = 10)
 
 #Plot labels
 plt.xticks([], rotation = 90)
