@@ -24,10 +24,12 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 
 <img width="800" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/All%20Neighborhoods%205%20year%20ROC.png">
 
+*Note: The names of the 23,917 neighborhoods do not fit underneath the x-axis. For viewability, they have been removed.
 - The mean growth rate is 52.16%
-- 5,482 neighborhoods are within the 75th percentile: their growth rates are above 64.71%.
-- 10,964 neighborhoods are within the 50th percentile: their growth rates are between 64.71% and 39.5%.
-- 5,481 neighborhoods are within the 25th percentile: their growth rates are less than 39.5%
+- 75th percentile: 5,482 neighborhoods with growth rates above 64.71%.
+- 50th percentile: 10,964 neighborhoods with growth rates between 64.71% and 39.5%.
+- 25th percentile: 5,481 neighborhoods with growth rates less than 39.5%
+- Red data points: 
 
 #### Top 50 Neighborhoods
 
@@ -40,6 +42,7 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 ### Limitations
 1. Null values accounted for nearly 1/5 of the data set.
 2. Findings rely on Zillow's value estimates.
+3. 
 
 ### Possible Improvements
 1. Find datasets with significantly less null values.
