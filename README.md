@@ -1,8 +1,8 @@
-# Python US Home Values
-The objective is to find neighborhoods with the fastest rising home values in order to assist potential real estate investors start their search. Realistically, real estate investment involves more than home value growth. However, this research provides a useful starting point.
+# Zillow Property Value Growth Analysis
+The objective is to showcase neighborhoods with the fastest rising home values to provide a useful starting point for potential real estate investors to start their search. 
 
 ### Understanding the Data
-Zillow ZHVI time-series [dataset](https://drive.google.com/file/d/1SeR8qDqmhj0YHPOMiBU1zEbyaIjmAnga/view?usp=sharing) from January 1989 to May 2024 containing home values of single-family residences in 23,917 US neighborhoods across 296 months. Values smoothed, seasonally adjusted, and calculated by taking a trimmed mean of Zillow's own estimates while accounting for [repeat sales index](https://www.investopedia.com/terms/r/repeatsales-method.asp) - [more here](https://www.zillow.com/research/methodology-neural-zhvi-32128/). 
+Zillow ZHVI time-series [dataset](https://drive.google.com/file/d/1SeR8qDqmhj0YHPOMiBU1zEbyaIjmAnga/view?usp=sharing) from January 1989 to May 2024 containing home values of single-family residences in 23,917 US neighborhoods across 296 months. Values are smoothed, seasonally adjusted, and calculated by taking a trimmed mean of Zillow's estimates while accounting for [repeat sales index](https://www.investopedia.com/terms/r/repeatsales-method.asp) - [more here](https://www.zillow.com/research/methodology-neural-zhvi-32128/). 
 
 ### Data Cleaning
 1. Null values
@@ -24,7 +24,7 @@ First, we look at the total set of neighborhoods. Then, we take the 50 neighborh
 
 <img width="800" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/All%20Neighborhoods%205%20year%20ROC.png">
 
-*Note: The names of the 23,917 neighborhoods do not fit underneath the x-axis. For viewability, they have been removed.
+<span style="font-size:0.5em;">*Note: The names of the 23,917 neighborhoods do not fit underneath the x-axis. For viewability, they have been removed.</span>
 
 Although the spread between the minimum and maximum is wide, the distribution of growth rates is symmetrical because the mean and median are approximately close.
 - Mean: 52.16%
@@ -47,8 +47,9 @@ The spread between minimum and maximum is closer but the distribution is less sy
 - The top 50 neighborhoods saw home values grow more than double in 5 years.
 
 ### Limitations
-1. Null values accounted for nearly 1/5 of the data set.
-2. Findings rely on Zillow's value estimates.
+1. This study only accounts for property value growth not other desirability factors such as safety, property tax, distance to amenities, and climate.
+2. Null values accounted for nearly 1/5 of the data set.
+3. Findings rely on Zillow's value estimates.
 
 ### Next Steps
 1. Identify neighborhoods within each percentile.
