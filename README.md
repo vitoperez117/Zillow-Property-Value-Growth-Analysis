@@ -21,7 +21,7 @@ Dropped the following columns with unrelated data: "RegionID", "SizeRank", "Metr
 Rate of change formula used:
 ((Current Value - Previous Value)/Previous Value) * 100
 
-First, we look at the total set of neighborhoods. Then, we take the 50 neighborhoods with the fastest growth and observe their distribution around the median.. Scatterplots are used here to observe the distribution across percentiles.
+First, we look at the total set of neighborhoods. Then, we take the 50 neighborhoods with the fastest growth and observe their distribution around the median. Scatterplots are used to observe the distribution across percentiles.
 
 #### All Neighborhoods
 
