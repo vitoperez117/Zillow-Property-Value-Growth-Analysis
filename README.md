@@ -7,12 +7,12 @@ Homeowners should start their search in the 75th percentile for the most rapid g
 A home buyer requires further investigation to determine if the growth rate is worth the current price of the home. One should look at other factors of desirability before deciding on a home. Volatility can also be measured to assist buyers with different levels of risk tolerance. Forecasting can also help buyers anticipate times to buy or sell.
 
 ### Understanding the Data
-Zillow ZHVI time-series [dataset](https://drive.google.com/file/d/1SeR8qDqmhj0YHPOMiBU1zEbyaIjmAnga/view?usp=sharing) from January 1989 to May 2024 containing home values of single-family residences in 23,917 US neighborhoods across 296 months. Values are smoothed, seasonally adjusted, and calculated by taking a trimmed mean of Zillow's estimates while accounting for [repeat sales index](https://www.investopedia.com/terms/r/repeatsales-method.asp) - [more here](https://www.zillow.com/research/methodology-neural-zhvi-32128/). 
+Zillow ZHVI time-series [dataset](https://drive.google.com/file/d/1SeR8qDqmhj0YHPOMiBU1zEbyaIjmAnga/view?usp=sharing) from January 2000 to May 2024 containing home values of single-family residences in 23,917 US neighborhoods across 296 months. Values are smoothed, seasonally adjusted, and calculated by taking a trimmed mean of Zillow's estimates while accounting for [repeat sales index](https://www.investopedia.com/terms/r/repeatsales-method.asp) - [more here](https://www.zillow.com/research/methodology-neural-zhvi-32128/). 
 
 ### Data Cleaning
 1. Null values
-There are 1,356,132 null values in the original dataset; that's **19.5%** (nearly 1/5) of total data. Some neighborhoods only have data for the past few months. For example, Silver Lake neighborhood in Blairstown Nownship, New Jersey only has data from December 2023 to May 2024. Filling them in with adjacent data (**pandas.bfill()**) significantly increased growth rates; doing this method caused some neighborhoods to show inaccurate growth rates like 40,000% in some.
-Null values were ultimately dropped. 
+There are 1,356,132 null values in the original dataset; that's **19.5%** (nearly 1/5) of total data. Some neighborhoods only have data for the past few months. For example, Silver Lake neighborhood in Blairstown Nownship, New Jersey only has data from December 2023 to May 2024. Filling them in with adjacent data (**pandas.bfill()**) significantly increased growth rates; doing this method caused some neighborhoods to show inaccurate growth rates like 40,000% in some. Null values were ultimately dropped. Dropping the nulls before calculating the growth rate reduces the rows from 23,917 to 21,928.
+
 
 2. Dropping columns
 Dropped the following columns with unrelated data: "RegionID", "SizeRank", "Metro", and "StateName" (state initials column was kept).
@@ -51,10 +51,9 @@ The spread between minimum and maximum is closer but the distribution is less sy
 
 ### Limitations
 1. This study only accounts for property value growth not other desirability factors such as safety, property tax, distance to amenities, and climate.
-2. The 5 year measure is an arbitrary number.
-3. Rate of growth does not measure volatility. 
-4. Null values accounted for nearly 1/5 of the data set.
-5. Findings rely on Zillow's value estimates.
+2. Rate of growth does not measure volatility. 
+3. Null values accounted for nearly 1/5 of the data set.
+4. Findings rely on Zillow's value estimates only.
 
 ### Next Steps
 1. Identify neighborhoods within each percentile.
