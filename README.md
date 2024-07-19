@@ -44,7 +44,7 @@ Although the spread between the minimum and maximum is wide, the distribution of
 
 <img width="500" src="https://github.com/vitoperez117/Python_US_Home_Values/blob/main/Output%20Plots/Top%2050%20Neighborhoods%20scatterplot.png">
 
-The spread between minimum and maximum is closer but the distribution is less symmetrical compared to the chart with all neighborhoods because mean and median are further apart.
+These 50 neighborhoods have the fastest growing home values. The spread between the minimum and maximum is closer but the distribution is less symmetrical compared to the chart with all neighborhoods because mean and median are further apart.
 - Mean: 152.27%
 - Median: 148.70%
 - The top 50 neighborhoods saw home values grow more than double in 5 years.
