@@ -10,9 +10,9 @@ A home buyer requires further investigation to determine if the growth rate is w
 Zillow ZHVI time-series [dataset](https://drive.google.com/file/d/1SeR8qDqmhj0YHPOMiBU1zEbyaIjmAnga/view?usp=sharing) from January 2000 to May 2024 containing home values of single-family residences in 23,917 US neighborhoods across 296 months. Values are smoothed, seasonally adjusted, and calculated by taking a trimmed mean of Zillow's estimates while accounting for [repeat sales index](https://www.investopedia.com/terms/r/repeatsales-method.asp) - [more here](https://www.zillow.com/research/methodology-neural-zhvi-32128/). 
 
 ### Data Cleaning
-Null values
-   
-There are 1,356,132 null values in the original dataset; that's **19.5%** (nearly 1/5) of total data. Some neighborhoods only have data for the past few months. For example, Silver Lake neighborhood in Blairstown Nownship, New Jersey only has data from December 2023 to May 2024. Filling them in with adjacent data (**pandas.bfill()**) significantly increased growth rates; doing this method caused some neighborhoods to show inaccurate growth rates like 40,000% in some. Null values were ultimately dropped. Dropping the nulls before calculating the growth rate reduces the rows from 23,917 to 21,928.
+1. Null values
+
+      There are 1,356,132 null values in the original dataset; that's **19.5%** (nearly 1/5) of total data. Some neighborhoods only have data for the past few months. For example, Silver Lake neighborhood in Blairstown Nownship, New Jersey only has data from December 2023 to May 2024. Filling them in with adjacent data (**pandas.bfill()**) significantly increased growth rates; doing this method caused some neighborhoods to show inaccurate growth rates like 40,000% in some. Null values were ultimately dropped. Dropping the nulls before calculating the growth rate reduces the rows from 23,917 to 21,928.
 
 Dropping columns
 
