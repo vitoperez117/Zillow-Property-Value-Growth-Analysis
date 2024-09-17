@@ -1,12 +1,12 @@
 # Zillow Property Value Growth Analysis
 The objective is to showcase neighborhoods with the fastest rising home values to provide a useful starting point for potential real estate investors to start their search. 
 
-### Findings
+## Findings
 Homeowners should start their search in the 75th percentile for the most rapid growth (> 64.71%). Relatively, the 50th percentile shows moderate growth (between 64.71% and 39.5%); homes with a growth rate greater than 52.16% are growing faster than the national average. Meanwhile, the 25th percentile contains homes with slower growth (less than 39.5%). Homes in these percentiles offer a second choice if  Homes with a negative growth rate (< 0%) might deter home buyers. However, these homes could be undervalued and might potentially be good investments. 
 
 A home buyer requires further investigation to determine if the growth rate is worth the current price of the home. One should look at other factors of desirability before deciding on a home. Volatility can also be measured to assist buyers with different levels of risk tolerance. Forecasting can also help buyers anticipate times to buy or sell.
 
-### Understanding the Data
+## Understanding the Data
 Zillow ZHVI time-series [dataset](https://drive.google.com/file/d/1SeR8qDqmhj0YHPOMiBU1zEbyaIjmAnga/view?usp=sharing) from January 2000 to May 2024 containing home values of single-family residences in 23,917 US neighborhoods across 296 months. Values are smoothed, seasonally adjusted, and calculated by taking a trimmed mean of Zillow's estimates while accounting for [repeat sales index](https://www.investopedia.com/terms/r/repeatsales-method.asp) - [more here](https://www.zillow.com/research/methodology-neural-zhvi-32128/). 
 
 ### Data Cleaning
@@ -22,7 +22,7 @@ Zillow ZHVI time-series [dataset](https://drive.google.com/file/d/1SeR8qDqmhj0YH
 Rate of change formula used:
 ((Current Value - Previous Value)/Previous Value) * 100
 
-First, we measure the distribution of neighborhoods. Then, we take the distribution for the 50 neighborhoods with the fastest growth. Scatterplots are used to observe the distribution across percentiles.
+First, we calculate the 5 year rate of change for each neighborhood. Then, we plot the distribution of rates of change. Next, we take the distribution for the 50 neighborhoods with the fastest growth. Scatterplots are used to observe the distribution across percentiles.
 
 #### All Neighborhoods
 
